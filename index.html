@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Epic Battle</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">
+                <span class="title-text">ROCK</span>
+                <span class="title-text">PAPER</span>
+                <span class="title-text">SCISSORS</span>
+            </h1>
+            <p class="subtitle">Epic Battle Arena</p>
+        </header>
+
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <div class="score-card player-score">
+                <div class="score-label">YOU</div>
+                <div class="score-value" id="playerScore">0</div>
+            </div>
+            <div class="score-card computer-score">
+                <div class="score-label">COMPUTER</div>
+                <div class="score-value" id="computerScore">0</div>
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <div class="game-area">
+            <!-- Player Choice Display -->
+            <div class="choice-display player-choice">
+                <div class="choice-label">Your Choice</div>
+                <div class="choice-icon" id="playerChoice">
+                    <i class="fas fa-question"></i>
+                </div>
+            </div>
+
+            <!-- VS Display -->
+            <div class="vs-display">
+                <div class="vs-text">VS</div>
+                <div class="battle-line"></div>
+            </div>
+
+            <!-- Computer Choice Display -->
+            <div class="choice-display computer-choice">
+                <div class="choice-label">Computer Choice</div>
+                <div class="choice-icon" id="computerChoice">
+                    <i class="fas fa-question"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Display -->
+        <div class="result-display" id="resultDisplay">
+            <div class="result-text" id="resultText">Choose your weapon!</div>
+        </div>
+
+        <!-- Choice Buttons -->
+        <div class="choice-buttons">
+            <button class="choice-btn rock-btn" data-choice="rock">
+                <div class="btn-content">
+                    <i class="fas fa-hand-rock"></i>
+                    <span>ROCK</span>
+                </div>
+            </button>
+            <button class="choice-btn paper-btn" data-choice="paper">
+                <div class="btn-content">
+                    <i class="fas fa-hand-paper"></i>
+                    <span>PAPER</span>
+                </div>
+            </button>
+            <button class="choice-btn scissors-btn" data-choice="scissors">
+                <div class="btn-content">
+                    <i class="fas fa-hand-scissors"></i>
+                    <span>SCISSORS</span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Reset Button -->
+        <button class="reset-btn" id="resetBtn">
+            <i class="fas fa-redo"></i>
+            Reset Game
+        </button>
+
+        <!-- Game Stats -->
+        <div class="game-stats">
+            <div class="stat-item">
+                <span class="stat-label">Games Played:</span>
+                <span class="stat-value" id="gamesPlayed">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Win Rate:</span>
+                <span class="stat-value" id="winRate">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
